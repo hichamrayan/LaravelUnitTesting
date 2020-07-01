@@ -41,4 +41,8 @@ class User extends Authenticatable
     {
         return "$this->firstname $this->lastname";
     }
+    public function isMinor()
+    {
+        return $this->age < 18 ? true : false;
+    }
 }
